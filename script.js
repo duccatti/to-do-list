@@ -9,8 +9,7 @@ function criali(){
 
 function criaButtonClear(){
     const buttonClear = document.createElement("button");
-    buttonClear.setAttribute('class', 'button-clear');
-    buttonClear.innerText = "Deletar";
+    buttonClear.setAttribute('class', 'button-clear bi bi-trash');
     return buttonClear;
 }
 
@@ -21,16 +20,23 @@ function criarTarefa(li, buttonClear){
 }
 
 toDoSend.addEventListener('click', function(e){
-    const li = criali();
-    const buttonClear = criaButtonClear();
-    criarTarefa(li, buttonClear)
-});
-
-toDoField.addEventListener('keyup', function(e){
-    if(e.keyCode === 13){
+    if (toDoField.value != ""){
         const li = criali();
         const buttonClear = criaButtonClear();
         criarTarefa(li, buttonClear)
+    } else {
+        alert("Favor inserir o nome da tarefa!")
+    }
+});
+
+toDoField.addEventListener('keyup', function(e){
+    if(e.keyCode === 13 && toDoField.value != ""){
+        const li = criali();
+        const buttonClear = criaButtonClear();
+        criarTarefa(li, buttonClear)
+    }
+    if(e.keyCode === 13 && toDoField.value == ""){
+        alert("Favor inserir o nome da tarefa!")
     }
 })
 

@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
 </head>
 <body>
-    <input type="text" class="to-do-field">
-    <button class="to-do-send">Enviar</button>
-    <ul class="to-do-list"></ul>
-
+    <div class="container">
+        <div class="field">
+            <input type="text" class="to-do-field" placeholder="Task to be done...">
+            <button class="to-do-send">Add</button>
+        </div>
+            
+        <div class="list">
+            <ul class="to-do-list"></ul>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
