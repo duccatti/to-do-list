@@ -10,7 +10,7 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     font-family: 'Noto Serif Oriya', serif;
     font-family: 'Poppins', sans-serif;
-    background-color: #9B55EA;
+    background-color: #eae055;
 }
 
 .container {
@@ -45,7 +45,7 @@ body {
 }
 
 .to-do-send {
-    background-color: #9B55EA;
+    background-color: #eae055;
     color: #fff;
     width: 65px;
     height: 30px;
@@ -81,7 +81,7 @@ li {
 }
 
 .bi-trash {
-    background-color: #9B55EA;
+    background-color: #eae055;
     font-size: 17px;
     color: #fff;
     border: none;
