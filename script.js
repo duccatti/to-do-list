@@ -1,6 +1,6 @@
 const toDoField = document.querySelector('.to-do-field');
 const toDoSend = document.querySelector('.to-do-send');
-const toDoList = document.querySelector('.to-do-list');
+
 
 function criali(){
     const li = document.createElement('li');
@@ -13,17 +13,34 @@ function criaButtonClear(){
     return buttonClear;
 }
 
-function criarTarefa(li, buttonClear){
+function criaDivList(){
+    const container = document.querySelector(".container")
+    const divList = document.createElement("div")
+    divList.setAttribute('class', 'list')
+    divList.appendChild(container)
+    return divList
+}
+
+function criaUlList(divList){
+    const ulList = document.createElement('ul')
+    ulList.setAttribute('class', 'to-do-list')
+    ulList.appendChild(divList)
+    return ulList
+}
+
+function criarTarefa(li, buttonClear, ulList){
     li.innerText = toDoField.value;
     li.appendChild(buttonClear);
-    toDoList.appendChild(li);
+    ulList.appendChild(li);
 }
 
 toDoSend.addEventListener('click', function(e){
     if (toDoField.value != ""){
+        const divList = criaDivList();
+        const ulList = criaUlList(divList);
         const li = criali();
         const buttonClear = criaButtonClear();
-        criarTarefa(li, buttonClear)
+        criarTarefa(li, buttonClear, ulList)
     } else {
         alert("Favor inserir o nome da tarefa!")
     }
