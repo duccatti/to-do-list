@@ -57,16 +57,17 @@ toDoSend.addEventListener('click', function(e){
 });
 
 toDoField.addEventListener('keyup', function(e){
-    if(e.keyCode === 13 && toDoField.value != ""){
+    if(toDoField.value == "" && e.keyCode === 13){
+        alert("Favor inserir o nome da tarefa!")
+
+    } if(e.keyCode === 13 && toDoField.value != ""){
         //const divList = criaDivList(container);
         //const ulList = criaUlList(divList);
         //const li = criali();
         //const buttonClear = criaButtonClear();
         criarTarefa(toDoField.value);
-    } if(e.keyCode === 13 && toDoField.value == ""){
-        alert("Favor inserir o nome da tarefa!");
-    }
-})
+    } ;
+    })
 
 addEventListener('click', function(e){
     const el = e.target;
